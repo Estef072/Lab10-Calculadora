@@ -3,51 +3,57 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-    mode: 'development',
-    // Entre point of project 
-    entry: './src/index.js',
-    // Name and path of output file
+    entry: './src/index.jsx',
     output: {
-        filename: '[name].bundle.js',
-        path: path.resolve(__dirname, 'bundle_react'),
+        path: path.join(__dirname, '/dist'),
+        filename: 'index_bundle.js',
     },
-    // Loaders for different file types
-    plugins: [
-        new MiniCssExtractPlugin({
-            filename: '[name].css'
-        }),
-        new HtmlWebpackPlugin({
-            template: './src/index.html'
-        })
-    ],
+    resolve: {
+        extensions: ['.js', '.jsx'],
+    },
     module: {
         rules: [
-            // Loader for css files
             {
-                test: /\.css$/i,
-                use: [MiniCssExtractPlugin.loader, 'css-loader'],
-            },
-            // Loader for js files
-            {
-                test: /\.m?js$/,
+                test: /\.m?jsx$/,
                 exclude: /(node_modules)/,
                 use: {
                     loader: 'babel-loader',
-                    options: {
-                        presets: ['@babel/preset-env', '@babel/preset-react']
-                    }
-                }
+                },
             },
-            // Loader for images and files
+            {
+                test: /\.scss$/i,
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    'css-loader',
+                    'sass-loader',
+                ],
+            },
+            {
+                test: /\.mp3$/,
+                loader: 'file-loader',
+                options: {
+                    name: '[name].[ext]',
+                    outputPath: 'aud/',
+                    publicPath: 'aud/',
+                },
+            },
             {
                 test: /\.(png|jpe?g|gif|mp4|mp3|webp|svg)$/i,
                 type: 'asset/resource',
                 generator: {
-                    filename:'[name][ext]',
-                    outputPath:'assets/',
-                    publicPath:'assets/'
-                }
+                    filename: '[name][ext]',
+                    outputPath: 'assets/',
+                    publicPath: 'assets/',
+                },
             },
         ],
     },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: './src/index.html',
+        }),
+        new MiniCssExtractPlugin({
+            filename: '[name].css',
+        }),
+    ],
 };
