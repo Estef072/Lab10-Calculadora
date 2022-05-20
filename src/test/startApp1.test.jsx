@@ -8,7 +8,5 @@ describe('Test StartApp1', () => {
     const testElement = screen.getByTestId('input-test-test');
 
     expect(testElement).toBeInTheDocument();
-
- })
-
-})
+  });
+});

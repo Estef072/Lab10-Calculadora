@@ -78,23 +78,23 @@ function StartApp() {
         </div>
         <button type="button" onClick={limpiar} className="button-grande">CLEAR</button>
         <button type="button" onClick={() => { changeSimbolo('mod'); }}>mod</button>
-        <button type="button" onClick={() => { changeSimbolo('/'); }}>/</button>
+        <button type="button" onClick={() => { changeSimbolo('/'); }} data-testid="ButtonDivi">/</button>
         <button type="button" onClick={evaluar}>+/-</button>
-        <button type="button" onClick={() => { changeNumber(7); }}>7</button>
-        <button type="button" onClick={() => { changeNumber(8); }}>8</button>
-        <button type="button" onClick={() => { changeNumber(9); }}>9</button>
-        <button type="button" onClick={() => { changeSimbolo('*'); }}>*</button>
-        <button type="button" onClick={() => { changeNumber(4); }}>4</button>
-        <button type="button" onClick={() => { changeNumber(5); }}>5</button>
-        <button type="button" onClick={() => { changeNumber(6); }}>6</button>
-        <button type="button" onClick={() => { changeSimbolo('+'); }}>+</button>
-        <button type="button" onClick={() => { changeNumber(1); }}>1</button>
-        <button type="button" onClick={() => { changeNumber(2); }}>2</button>
-        <button type="button" onClick={() => { changeNumber(3); }}>3</button>
-        <button type="button" onClick={() => { changeSimbolo('-'); }}>-</button>
-        <button type="button" onClick={() => { changeNumber('.'); }}>.</button>
+        <button type="button" onClick={() => { changeNumber(7); }} data-testid="Testnumero7">7</button>
+        <button type="button" onClick={() => { changeNumber(8); }} data-testid="Testnumero8">8</button>
+        <button type="button" onClick={() => { changeNumber(9); }} data-testid="Testnumero9">9</button>
+        <button type="button" onClick={() => { changeSimbolo('*'); }} data-testid="ButtonPor">*</button>
+        <button type="button" onClick={() => { changeNumber(4); }} data-testid="Testnumero4">4</button>
+        <button type="button" onClick={() => { changeNumber(5); }} data-testid="Testnumero5">5</button>
+        <button type="button" onClick={() => { changeNumber(6); }} data-testid="Testnumero6">6</button>
+        <button type="button" onClick={() => { changeSimbolo('+'); }} data-testid="ButtonMas">+</button>
+        <button type="button" onClick={() => { changeNumber(1); }} data-testid="Testnumero1">1</button>
+        <button type="button" onClick={() => { changeNumber(2); }} data-testid="Testnumero2">2</button>
+        <button type="button" onClick={() => { changeNumber(3); }} data-testid="Testnumero3">3</button>
+        <button type="button" onClick={() => { changeSimbolo('-'); }} data-testid="ButtonMenos">-</button>
+        <button type="button" onClick={() => { changeNumber('.'); }} data-testid="ButtonPunto">.</button>
         <button type="button" onClick={() => { changeNumber(0); }}>0</button>
-        <button type="button" onClick={result} className="button-grande1">=</button>
+        <button type="button" onClick={result} data-testid="ButtonIgual" className="button-grande1">=</button>
       </div>
     </div>
 
