@@ -74,7 +74,7 @@ function StartApp() {
       <div className="grid-calc">
         <div className="muestra-datos">
           <div className="entrada-datos">{dato ? num + dato : ''}</div>
-          <div className="salida-datos">{resulta ? restDatos(resulta) : (!dato ? num : num2)}</div>
+          <div className="salida-datos" data-testid="suma">{resulta ? restDatos(resulta) : (!dato ? num : num2)}</div>
         </div>
         <button type="button" onClick={limpiar} className="button-grande">CLEAR</button>
         <button type="button" onClick={() => { changeSimbolo('mod'); }}>mod</button>

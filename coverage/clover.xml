@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1653019153639" clover="3.2.0">
-  <project timestamp="1653019153640" name="All files">
+<coverage generated="1653020695172" clover="3.2.0">
+  <project timestamp="1653020695173" name="All files">
     <metrics statements="52" coveredstatements="6" conditionals="20" coveredconditionals="3" methods="23" coveredmethods="1" elements="95" coveredelements="10" complexity="0" loc="52" ncloc="52" packages="1" files="1" classes="1"/>
     <file name="StartApp.jsx" path="C:\Users\estef\OneDrive\Escritorio\Tercer año\Lab10-Calculadora\src\StartApp.jsx">
       <metrics statements="52" coveredstatements="6" conditionals="20" coveredconditionals="3" methods="23" coveredmethods="1"/>
