@@ -69,7 +69,7 @@ function StartApp() {
   }
 
   return (
-    <div className="Calculator">
+    <div className="Calculator" data-testid="input-test-test">
       <h1 className="titulo">Calculator</h1>
       <div className="grid-calc">
         <div className="muestra-datos">
